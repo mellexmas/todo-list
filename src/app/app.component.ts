@@ -16,4 +16,16 @@ export class AppComponent {
     'item 4',
     'toto',
   ];
+
+public addItem ($event: KeyboardEvent): void {
+  if ($event.code === 'Enter'){
+    const $input: HTMLInputElement|null = $event.target as HTMLInputElement;
+    if ($input !== null){
+      console.log($input.value)
+    }
+   // console.log($event.target.value)
+  }
+  
+}
+
 }
