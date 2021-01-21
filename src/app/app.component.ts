@@ -17,15 +17,23 @@ export class AppComponent {
     'toto',
   ];
 
-public addItem ($event: KeyboardEvent): void {
-  if ($event.code === 'Enter'){
-    const $input: HTMLInputElement|null = $event.target as HTMLInputElement;
-    if ($input !== null){
-      console.log($input.value)
+  public addItem($event: KeyboardEvent): void {
+    if ($event.code === 'Enter') {
+      //const $input: HTMLInputElement|null = $event.target as HTMLInputElement;
+      //
+
+      const $input: EventTarget | null = $event.target;
+
+      if ($input instanceof HTMLInputElement) {
+        console.log($input.value);
+      }
+      console.log("enter pressed");
+      /*if ($input !== null) {
+        console.log($input.value)
+      }*/
+      // console.log($event.target.value)
     }
-   // console.log($event.target.value)
+
   }
-  
-}
 
 }
