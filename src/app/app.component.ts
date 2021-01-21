@@ -42,10 +42,10 @@ export class AppComponent {
   }
 
 
-public removeItem($event: MouseEvent, item:string): void {
+public removeItem(index : number): void {
   //$event:MouseEvent : pas utilisé alors on peut enlever et du html aussi
-  const index = this.todoArray.indexOf(item);//recupere l'index du 1er element trouvé
-  console.log(item);
+  //const index = this.todoArray.indexOf(item);//recupere l'index du 1er element trouvé
+ // console.log(item);
   if (index !== -1) {
     this.todoArray.splice(index, 1); //enleve un ou pls elemts dans table index du 1er elem a suppr et le nb a suppr a partir de la
   }
