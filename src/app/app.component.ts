@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TodoItem } from './todo-item';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,29 @@ export class AppComponent {
   title = 'todo-list';
 
 
-  public todoArray: Array<string> = [
-    'item 1',
-    'item 2',
-    'item 3',
-    'item 4',
-    'toto',
+  public todoArray: Array<TodoItem> = [
+    {
+      title : 'item 1',
+      checked: false,
+    },
+    {
+      title : 'item 2',
+      checked: false,
+    },
+    {
+      title : 'item 3',
+      checked: false,
+    },
+    {
+      title : 'item 4',
+      checked: false,
+    },
+    {
+      title : 'toto',
+      checked: false,
+    }
+    
+    
   ];
 
   public addItem($event: KeyboardEvent): void {
@@ -27,7 +45,10 @@ export class AppComponent {
         const str = $input.value.trim();
 
         if (str !== '') {
-          this.todoArray.push($input.value);
+          this.todoArray.push({
+            title : str,
+            checked : false,
+          });
           $input.value = '';
         }
 
