@@ -13,15 +13,15 @@ export class AppComponent {
   public todoArray: Array<TodoItem> = [
     {
       title : 'item 1',
-      checked: false,
+      checked: true,
     },
     {
       title : 'item 2',
-      checked: false,
+      checked: true,
     },
     {
       title : 'item 3',
-      checked: false,
+      checked: true,
     },
     {
       title : 'item 4',
