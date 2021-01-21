@@ -42,7 +42,7 @@
                                 {{ item }}
                             </label>
                         </div>
-                        <button class="btn  btn-outline-danger btn-sm" > X </button>
+                        <button class="btn  btn-outline-danger btn-sm" id="erase" (click)="removeItem($event, item)"> X </button>
                     </li>
                     
                 </ul>
