@@ -9,8 +9,18 @@ import { TodoItem } from './todo-item';
 export class AppComponent {
   title = 'todo-list';
 
-
+ 
   public todoArray: Array<TodoItem> = [];
+
+  public get atLeastOneChecked(): boolean {
+    for (const item of this.todoArray) {
+      if (item.checked === true){
+        return true;
+      }
+    }
+    return false;
+  }
+
 
   public addItem($event: KeyboardEvent): void {
     if ($event.code === 'Enter') {

@@ -50,7 +50,8 @@
                     <div>
                         {{todoArray.length}} items
                     </div>
-                    <button class="btn btn-sm btn-link" (click)="clearCompleted()">
+                   
+                    <button *ngIf="atLeastOneChecked"class="btn btn-sm btn-link" (click)="clearCompleted()">
                         Clear completed
                     </button>
                     
