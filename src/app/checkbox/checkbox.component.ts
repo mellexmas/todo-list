@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-checkbox',
@@ -19,6 +20,8 @@ export class CheckboxComponent implements OnInit {
 
   @Input()
   public checked = false;
+
+  public checkedChange = new EventEmitter(); //on va utliser quand l'attribu checked change
   //ce decorator decorate nous label attribute . add info for angular;
   //permet de dire que l'attribut que j'ai la je peux l'utiliser dans la balise html du web component qu'on crée
   //le @input ne peut etre mis que sur un attribut de classe il s'applique à l'élement en dessous
