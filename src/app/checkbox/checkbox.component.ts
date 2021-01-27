@@ -10,18 +10,21 @@ export class CheckboxComponent implements OnInit {
 
   public id: string;
   
+  constructor() {
+    this.id = 'app-checkbox-' + CheckboxComponent.counter; //nom de classe.nomattribut
+    CheckboxComponent.counter++;
+  }
+
+
+
   @Input()
   public checked = false;
   //ce decorator decorate nous label attribute . add info for angular;
   //permet de dire que l'attribut que j'ai la je peux l'utiliser dans la balise html du web component qu'on crée
   //le @input ne peut etre mis que sur un attribut de classe il s'applique à l'élement en dessous
   @Input()
-  public label: string|null= null;
+  public label: string | null = null;
 
-  constructor() { 
-    this.id = 'app-checkbox-' + CheckboxComponent.counter; //nom de classe.nomattribut
-    CheckboxComponent.counter++;
-  }
 
 
 
