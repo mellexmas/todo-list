@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CheckboxComponent implements OnInit {
   private static counter = 0;
   public id: string;
+  public checked = false;
   //ce decorator decorate nous label attribute . add info for angular;
   //permet de dire que l'attribut que j'ai la je peux l'utiliser dans la balise html du web component qu'on crée
   @Input()
