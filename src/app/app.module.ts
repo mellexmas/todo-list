@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ArraySizeComponent } from './array-size/array-size.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { ParamPageComponent } from './param-page/param-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CheckboxComponent,
-    ArraySizeComponent
+    ArraySizeComponent,
+    HomePageComponent,
+    ParamPageComponent
   ],
   imports: [
     BrowserModule,
